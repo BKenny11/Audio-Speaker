@@ -32,12 +32,12 @@ function startRecording() {
 }
 
 
-function searching() {
-  console.log("test");
-  let response = await fetch('https://www.googleapis.com/youtube/v3/search');
-  let data = await response.json();
-  console.log(data);
-}
+// function searching() {
+//   console.log("test");
+//   let response = await fetch('https://www.googleapis.com/youtube/v3/search');
+//   let data = await response.json();
+//   console.log(data);
+// }
 
 
 // 2. This code loads the IFrame Player API code asynchronously.
