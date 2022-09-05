@@ -5,9 +5,8 @@ var aCtx;
 var analyser;
 var microphone;
 var startbtn = document.getElementById('StartButton');
-
 async function startRecording() {
-  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+  navigator.getUserMedia = navigator.getUserMedia || navigator.mediaDevices.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
   if (!aCtx) {
     if (navigator.getUserMedia) {
       startbtn.innerHTML = "Stop Recording";
@@ -22,6 +21,8 @@ async function startRecording() {
         },
         function () { console.log("Error 003.") }
       );
+    }else{
+      
     }
   } else {
     startbtn.innerHTML = "Start Recording";
