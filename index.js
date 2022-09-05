@@ -6,7 +6,7 @@ var analyser;
 var microphone;
 var startbtn = document.getElementById('StartButton');
 
-function startRecording() {
+async function startRecording() {
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
   if (!aCtx) {
     if (navigator.getUserMedia) {
@@ -31,6 +31,10 @@ function startRecording() {
   }
 }
 
+
+function Test(){
+  console.log("this is working")
+}
 
 // function searching() {
 //   console.log("test");
